@@ -491,7 +491,7 @@ export default function HomePage() {
                 alt="English" 
                 fill 
                 sizes="(max-width: 768px) 100vw, 25vw"
-                className="object-cover transition-all duration-500 group-hover:scale-105 saturate-[35%] group-hover:saturate-100 contrast-[1.15] group-hover:contrast-100 brightness-[0.65] group-hover:brightness-90"
+                className="object-cover transition-all duration-500 group-hover:scale-105 saturate-100 brightness-90 md:saturate-[35%] md:group-hover:saturate-100 md:contrast-[1.15] md:group-hover:contrast-100 md:brightness-[0.65] md:group-hover:brightness-90"
               />
 
               {/* Glass Block */}
@@ -526,7 +526,7 @@ export default function HomePage() {
                 alt="Français" 
                 fill 
                 sizes="(max-width: 768px) 100vw, 25vw"
-                className="object-cover transition-all duration-500 group-hover:scale-105 saturate-[35%] group-hover:saturate-100 contrast-[1.15] group-hover:contrast-100 brightness-[0.65] group-hover:brightness-90"
+                className="object-cover transition-all duration-500 group-hover:scale-105 saturate-100 brightness-90 md:saturate-[35%] md:group-hover:saturate-100 md:contrast-[1.15] md:group-hover:contrast-100 md:brightness-[0.65] md:group-hover:brightness-90"
               />
 
               {/* Glass Block */}
@@ -561,7 +561,7 @@ export default function HomePage() {
                 alt="Espagnol" 
                 fill 
                 sizes="(max-width: 768px) 100vw, 25vw"
-                className="object-cover transition-all duration-500 group-hover:scale-105 saturate-[35%] group-hover:saturate-100 contrast-[1.15] group-hover:contrast-100 brightness-[0.65] group-hover:brightness-90"
+                className="object-cover transition-all duration-500 group-hover:scale-105 saturate-100 brightness-90 md:saturate-[35%] md:group-hover:saturate-100 md:contrast-[1.15] md:group-hover:contrast-100 md:brightness-[0.65] md:group-hover:brightness-90"
               />
 
               {/* Glass Block */}
@@ -596,7 +596,7 @@ export default function HomePage() {
                 alt="Arabe" 
                 fill 
                 sizes="(max-width: 768px) 100vw, 25vw"
-                className="object-cover transition-all duration-500 group-hover:scale-105 saturate-[35%] group-hover:saturate-100 contrast-[1.15] group-hover:contrast-100 brightness-[0.65] group-hover:brightness-90"
+                className="object-cover transition-all duration-500 group-hover:scale-105 saturate-100 brightness-90 md:saturate-[35%] md:group-hover:saturate-100 md:contrast-[1.15] md:group-hover:contrast-100 md:brightness-[0.65] md:group-hover:brightness-90"
               />
 
               {/* Glass Block */}
