@@ -764,19 +764,19 @@ export default function HomePage() {
             {[
               {
                 title: t.blogPost1Title,
-                image: "/images/global/banner1.jpg",
+                image: "/images/blog/ielts-prep.jpg",
                 tag: t.blogPost1Tag,
                 date: language === "fr" ? "10 Janvier 2026" : "January 10, 2026"
               },
               {
                 title: t.blogPost2Title,
-                image: "/images/global/about-img.png",
+                image: "/images/blog/kids-learning.jpg",
                 tag: t.blogPost2Tag,
                 date: language === "fr" ? "12 Février 2026" : "February 12, 2026"
               },
               {
                 title: t.blogPost3Title,
-                image: "/images/global/cta-thumb.webp",
+                image: "/images/blog/business-morocco.jpg",
                 tag: t.blogPost3Tag,
                 date: language === "fr" ? "1 Mars 2026" : "March 01, 2026"
               }
