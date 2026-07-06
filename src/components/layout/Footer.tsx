@@ -22,9 +22,9 @@ export function Footer() {
               <Image 
                 src="/images/brand/next_point_academy.svg" 
                 alt="Next Point Academy" 
-                width={180} 
-                height={52} 
-                className="h-12 w-auto brightness-0 invert"
+                width={240} 
+                height={70} 
+                className="h-20 w-auto brightness-0 invert"
               />
             </Link>
             <p className="text-xs text-gray-300 leading-relaxed max-w-sm">
