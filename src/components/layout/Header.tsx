@@ -2,6 +2,7 @@
 
 import { useState, useRef, useEffect } from "react";
 import Link from "next/link";
+import Image from "next/image";
 import { 
   Menu, 
   X, 
@@ -81,9 +82,16 @@ export function Header() {
         
         {/* Left Side: Logo */}
         <div className="flex-1 flex justify-start">
-          <Link href="/" className={`text-xl font-black tracking-tight shrink-0 flex items-center gap-2 transition-colors duration-300 ${scrolled ? "text-[#0F1E43]" : "text-white"}`}>
-            <div className={`size-6 rounded-lg flex items-center justify-center text-[10px] font-black transition-colors duration-300 ${scrolled ? "bg-[#0F1E43] text-[#BEF264]" : "bg-white text-[#0F1E43]"}`}>N</div>
-            Next Point Academy
+          <Link href="/" className="shrink-0 flex items-center">
+            <Image 
+              src="/images/brand/next_point_academy.svg" 
+              alt="Next Point Academy" 
+              width={140} 
+              height={40} 
+              className={`h-9 w-auto transition-all duration-300 ${
+                scrolled ? "" : "brightness-0 invert"
+              }`}
+            />
           </Link>
         </div>
 

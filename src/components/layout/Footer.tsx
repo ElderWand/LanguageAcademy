@@ -1,6 +1,7 @@
 "use client";
 
 import Link from "next/link";
+import Image from "next/image";
 import { Mail, Phone, MapPin, Award } from "lucide-react";
 import { useLanguage } from "@/context/LanguageContext";
 import { footerTranslations } from "@/lib/translations";
@@ -17,8 +18,14 @@ export function Footer() {
           
           {/* Col 1: Brand & Contact Info */}
           <div className="col-span-2 md:col-span-3 lg:col-span-2 space-y-6">
-            <Link href="/" className="text-xl font-black tracking-tight text-white hover:opacity-90 transition-opacity">
-              Next Point Academy
+            <Link href="/" className="inline-block hover:opacity-90 transition-opacity">
+              <Image 
+                src="/images/brand/next_point_academy.svg" 
+                alt="Next Point Academy" 
+                width={180} 
+                height={52} 
+                className="h-12 w-auto brightness-0 invert"
+              />
             </Link>
             <p className="text-xs text-gray-300 leading-relaxed max-w-sm">
               {t.desc}
