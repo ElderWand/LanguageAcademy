@@ -1,9 +1,9 @@
 "use client";
 
 import { createContext, useContext, useState, ReactNode } from "react";
-import { LevelTestForm } from "@/components/forms/LevelTestForm";
 
 interface LevelTestContextType {
+  isOpen: boolean;
   openTestModal: () => void;
   closeTestModal: () => void;
 }
@@ -17,9 +17,8 @@ export function LevelTestProvider({ children }: { children: ReactNode }) {
   const closeTestModal = () => setIsOpen(false);
 
   return (
-    <LevelTestContext.Provider value={{ openTestModal, closeTestModal }}>
+    <LevelTestContext.Provider value={{ isOpen, openTestModal, closeTestModal }}>
       {children}
-      <LevelTestForm open={isOpen} onOpenChange={setIsOpen} />
     </LevelTestContext.Provider>
   );
 }

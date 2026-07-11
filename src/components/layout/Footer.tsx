@@ -2,16 +2,17 @@
 
 import Link from "next/link";
 import Image from "next/image";
-import { Mail, Phone, MapPin, Award } from "lucide-react";
+import { Mail, Phone, MapPin } from "lucide-react";
 import { useLanguage } from "@/context/LanguageContext";
 import { footerTranslations } from "@/lib/translations";
+import { NewsletterForm } from "@/components/client/NewsletterForm";
 
 export function Footer() {
   const { language } = useLanguage();
   const t = footerTranslations[language];
 
   return (
-    <footer className="bg-[#0F1E43] text-white border-t border-white/10 pt-16 pb-8">
+    <footer className="bg-brand-navy text-white border-t border-white/10 pt-16 pb-8">
       <div className="mx-auto max-w-7xl px-6 lg:px-12">
         {/* 6-Column Grid Layout */}
         <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-10 border-b border-white/10 pb-16">
@@ -25,43 +26,44 @@ export function Footer() {
                 width={360} 
                 height={130} 
                 className="w-[360px] h-auto brightness-0 invert"
+                style={{ height: "auto" }}
               />
             </Link>
             <p className="text-xs text-gray-300 leading-relaxed max-w-sm">
               {t.desc}
             </p>
-            <div className="space-y-3 text-xs text-gray-300">
-              <a href="mailto:contact@nextpointacademy.com" className="flex items-center gap-2 hover:text-white transition-colors">
-                <Mail className="size-4 text-[#BEF264]" />
-                contact@nextpointacademy.com
-              </a>
-              <a href="tel:+212522000000" className="flex items-center gap-2 hover:text-white transition-colors">
-                <Phone className="size-4 text-[#BEF264]" />
-                +212 522 00 00 00
-              </a>
-              <p className="flex items-center gap-2">
-                <MapPin className="size-4 text-[#BEF264]" />
-                {t.address}
-              </p>
+            <div className="space-y-3 text-xs text-gray-300 font-medium">
+              <div className="flex items-start gap-3">
+                <MapPin className="size-4.5 text-brand-lime shrink-0 mt-0.5" />
+                <span>{t.address}</span>
+              </div>
+              <div className="flex items-center gap-3">
+                <Phone className="size-4.5 text-brand-lime shrink-0" />
+                <a href="tel:+212663068618" className="hover:text-white transition-colors">+212 6 63 06 86 18</a>
+              </div>
+              <div className="flex items-center gap-3">
+                <Mail className="size-4.5 text-brand-lime shrink-0" />
+                <span>contact@nextpointacademy.com</span>
+              </div>
             </div>
           </div>
 
           {/* Col 2: Programs */}
           <div className="space-y-4">
-            <h4 className="text-xs font-bold uppercase tracking-wider text-[#BEF264]">{t.colPrograms}</h4>
+            <h4 className="text-xs font-bold uppercase tracking-wider text-brand-lime">{t.colPrograms}</h4>
             <ul className="space-y-2.5 text-xs text-gray-300 font-medium">
-              <li><Link href="/#programs" className="hover:text-white transition-colors">{t.kids}</Link></li>
-              <li><Link href="/#programs" className="hover:text-white transition-colors">{t.juniors}</Link></li>
-              <li><Link href="/#programs" className="hover:text-white transition-colors">{t.teens}</Link></li>
-              <li><Link href="/#programs" className="hover:text-white transition-colors">{t.adults}</Link></li>
-              <li><Link href="/#programs" className="hover:text-white transition-colors">{t.professionals}</Link></li>
+              <li><Link href="/programmes/kids-academy" className="hover:text-white transition-colors">{t.kids}</Link></li>
+              <li><Link href="/programmes/juniors" className="hover:text-white transition-colors">{t.juniors}</Link></li>
+              <li><Link href="/programmes/teens" className="hover:text-white transition-colors">{t.teens}</Link></li>
+              <li><Link href="/programmes/adultes" className="hover:text-white transition-colors">{t.adults}</Link></li>
+              <li><Link href="/programmes/professionnels" className="hover:text-white transition-colors">{t.professionals}</Link></li>
               <li><Link href="/camps-ete" className="hover:text-white transition-colors">{t.summerCamps}</Link></li>
             </ul>
           </div>
 
           {/* Col 3: Languages - English, French, Spanish, Arabic only */}
           <div className="space-y-4">
-            <h4 className="text-xs font-bold uppercase tracking-wider text-[#BEF264]">{t.colLanguages}</h4>
+            <h4 className="text-xs font-bold uppercase tracking-wider text-brand-lime">{t.colLanguages}</h4>
             <ul className="space-y-2.5 text-xs text-gray-300 font-medium">
               <li><Link href="/langues/anglais" className="hover:text-white transition-colors">🇬🇧 {t.english}</Link></li>
               <li><Link href="/langues/francais" className="hover:text-white transition-colors">🇫🇷 {t.french}</Link></li>
@@ -72,18 +74,18 @@ export function Footer() {
 
           {/* Col 4: Exams & Certifications */}
           <div className="space-y-4">
-            <h4 className="text-xs font-bold uppercase tracking-wider text-[#BEF264]">{t.colExams}</h4>
+            <h4 className="text-xs font-bold uppercase tracking-wider text-brand-lime">{t.colExams}</h4>
             <ul className="space-y-2.5 text-xs text-gray-300 font-medium">
-              <li><Link href="/examens" className="hover:text-white transition-colors">{t.ielts}</Link></li>
-              <li><Link href="/examens" className="hover:text-white transition-colors">{t.toefl}</Link></li>
-              <li><Link href="/examens" className="hover:text-white transition-colors">{t.delf}</Link></li>
-              <li><Link href="/examens" className="hover:text-white transition-colors">{t.dele}</Link></li>
+              <li><Link href="/examens/ielts" className="hover:text-white transition-colors">{t.ielts}</Link></li>
+              <li><Link href="/examens/toefl" className="hover:text-white transition-colors">{t.toefl}</Link></li>
+              <li><Link href="/examens/delf" className="hover:text-white transition-colors">{t.delf}</Link></li>
+              <li><Link href="/examens/dele" className="hover:text-white transition-colors">{t.dele}</Link></li>
             </ul>
           </div>
 
           {/* Col 5: Academy */}
           <div className="space-y-4">
-            <h4 className="text-xs font-bold uppercase tracking-wider text-[#BEF264]">{t.colAcademy}</h4>
+            <h4 className="text-xs font-bold uppercase tracking-wider text-brand-lime">{t.colAcademy}</h4>
             <ul className="space-y-2.5 text-xs text-gray-300 font-medium">
               <li><Link href="/institut" className="hover:text-white transition-colors">{t.history}</Link></li>
               <li><Link href="/institut" className="hover:text-white transition-colors">{t.pedagogy}</Link></li>
@@ -100,35 +102,14 @@ export function Footer() {
         <div className="grid grid-cols-1 md:grid-cols-12 gap-8 pt-10 items-center">
 
           {/* Newsletter Box */}
-          <div className="md:col-span-5 space-y-3">
-            <h5 className="text-xs font-bold uppercase tracking-wider text-[#BEF264]">{t.newsletter}</h5>
+          <div className="md:col-span-5 space-y-3 text-left">
+            <h5 className="text-xs font-bold uppercase tracking-wider text-brand-lime">{t.newsletter}</h5>
             <p className="text-[11px] text-gray-300 leading-relaxed">
               {t.newsletterDesc}
             </p>
-            <form onSubmit={(e) => e.preventDefault()} className="flex gap-2 max-w-sm">
-              <input
-                type="email"
-                placeholder={t.newsletterPlaceholder}
-                required
-                className="bg-white/10 border border-white/15 rounded-xl px-4 py-2 text-xs text-white outline-none w-full placeholder-gray-400 focus:border-white/30"
-              />
-              <button type="submit" className="bg-[#BEF264] text-[#0F1E43] hover:bg-[#A3E635] text-xs font-bold px-4 py-2 rounded-xl transition-all duration-200 cursor-pointer">
-                {t.subscribe}
-              </button>
-            </form>
+            <NewsletterForm />
           </div>
 
-          {/* Accreditations Row */}
-          <div className="md:col-span-4 flex flex-wrap gap-4 items-center justify-start md:justify-center">
-            <div className="flex items-center gap-1.5 bg-white/5 border border-white/10 rounded-full px-3 py-1.5 text-[10px] text-gray-300 font-bold">
-              <Award className="size-4 text-[#BEF264]" />
-              <span>CECRL Certifié</span>
-            </div>
-            <div className="flex items-center gap-1.5 bg-white/5 border border-white/10 rounded-full px-3 py-1.5 text-[10px] text-gray-300 font-bold">
-              <Award className="size-4 text-[#BEF264]" />
-              <span>Cambridge Partner</span>
-            </div>
-          </div>
 
           {/* Social Links */}
           <div className="md:col-span-3 flex items-center justify-start md:justify-end gap-3.5">

@@ -13,15 +13,16 @@ interface LanguageContextType {
 const LanguageContext = createContext<LanguageContextType | undefined>(undefined);
 
 export function LanguageProvider({ children }: { children: ReactNode }) {
-  const [language, setLanguageState] = useState<Language>(() => {
-    if (typeof window !== "undefined") {
-      const stored = localStorage.getItem("npa-language") as Language;
-      if (stored === "fr" || stored === "en") {
-        return stored;
-      }
+  const [language, setLanguageState] = useState<Language>("fr");
+
+  useEffect(() => {
+    const stored = localStorage.getItem("npa-language") as Language;
+    if (stored === "fr" || stored === "en") {
+      setTimeout(() => {
+        setLanguageState(stored);
+      }, 0);
     }
-    return "fr";
-  });
+  }, []);
 
   useEffect(() => {
     document.documentElement.lang = language;
@@ -29,9 +30,7 @@ export function LanguageProvider({ children }: { children: ReactNode }) {
 
   const setLanguage = (lang: Language) => {
     setLanguageState(lang);
-    if (typeof window !== "undefined") {
-      localStorage.setItem("npa-language", lang);
-    }
+    localStorage.setItem("npa-language", lang);
   };
 
   const toggleLanguage = () => {

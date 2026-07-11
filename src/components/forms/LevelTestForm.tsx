@@ -81,17 +81,13 @@ export function LevelTestForm({ open, onOpenChange }: LevelTestFormProps) {
                 <SelectItem value="francais">Français</SelectItem>
                 <SelectItem value="espagnol">Espagnol</SelectItem>
                 <SelectItem value="arabe">Arabe</SelectItem>
-                <SelectItem value="allemand">Allemand</SelectItem>
-                <SelectItem value="italien">Italien</SelectItem>
-                <SelectItem value="chinois">Chinois</SelectItem>
-                <SelectItem value="japonais">Japonais</SelectItem>
               </SelectContent>
             </Select>
           </div>
 
           <Button
             type="submit"
-            className="mt-2 w-full bg-[#057A55] text-white hover:bg-[#046C4E] border-none font-bold rounded-xl py-6 text-xs shadow-sm"
+            className="mt-2 w-full bg-brand-emerald text-white hover:bg-brand-emerald-dark border-none font-bold rounded-xl py-6 text-xs shadow-sm"
           >
             Commencer mon test gratuit
           </Button>

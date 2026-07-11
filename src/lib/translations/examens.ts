@@ -1,0 +1,32 @@
+export const examensTranslations = {
+  fr: {
+    heroBadge: "Préparation Officielle",
+    heroTitle: "Certifications & Examens Internationaux",
+    heroDesc: "Maximisez votre score grâce à des programmes intensifs conçus pour déjouer les pièges des épreuves officielles.",
+    englishSection: "Certifications en Anglais",
+    frenchSection: "Certifications en Français",
+    spanishSection: "Certifications en Espagnol",
+    exploreExam: "Préparer cet examen",
+    durationLabel: "Durée de l'épreuve",
+    validityLabel: "Validité",
+    formatLabel: "Format",
+    sectionsLabel: "Épreuves & Sections",
+    strategyLabel: "Notre Stratégie de Préparation",
+    backToAll: "Toutes les certifications",
+  },
+  en: {
+    heroBadge: "Official Preparation",
+    heroTitle: "International Certifications & Exams",
+    heroDesc: "Maximize your score with intensive programs designed to overcome the challenges of official exams.",
+    englishSection: "English Certifications",
+    frenchSection: "French Certifications",
+    spanishSection: "Spanish Certifications",
+    exploreExam: "Prepare for this exam",
+    durationLabel: "Exam Duration",
+    validityLabel: "Validity",
+    formatLabel: "Format",
+    sectionsLabel: "Tests & Sections",
+    strategyLabel: "Our Preparation Strategy",
+    backToAll: "All certifications",
+  }
+};
