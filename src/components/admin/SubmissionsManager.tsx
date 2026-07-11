@@ -19,7 +19,22 @@ import {
   BadgeAlert,
   UserCheck
 } from "lucide-react";
-import { SubmissionStatus, FormType } from "@prisma/client";
+type FormType = "CONTACT" | "LEVEL_TEST" | "NEWSLETTER" | "LEAD_CAPTURE";
+type SubmissionStatus = "UNREAD" | "READ" | "REPLIED" | "ARCHIVED";
+
+const FormType = {
+  CONTACT: "CONTACT",
+  LEVEL_TEST: "LEVEL_TEST",
+  NEWSLETTER: "NEWSLETTER",
+  LEAD_CAPTURE: "LEAD_CAPTURE",
+} as const;
+
+const SubmissionStatus = {
+  UNREAD: "UNREAD",
+  READ: "READ",
+  REPLIED: "REPLIED",
+  ARCHIVED: "ARCHIVED",
+} as const;
 
 interface Submission {
   id: number;
