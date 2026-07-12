@@ -57,7 +57,7 @@ export async function updateProgram(id: number, input: ProgramInput) {
     });
 
     // 2. Perform transaction to update main program and translations
-    await db.$transaction(async (tx) => {
+    await db.$transaction(async (tx: any) => {
       await tx.program.update({
         where: { id },
         data: {
@@ -141,7 +141,7 @@ export async function updateExam(id: number, input: ExamInput) {
       include: { translations: true },
     });
 
-    await db.$transaction(async (tx) => {
+    await db.$transaction(async (tx: any) => {
       await tx.exam.update({
         where: { id },
         data: {
