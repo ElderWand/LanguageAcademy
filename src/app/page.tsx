@@ -394,10 +394,10 @@ export default function HomePage() {
 
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
             {[
-              { title: fr.academicSubtitle1, subtitle: fr.academicDesc1, image: "/images/global/about-img.png" },
-              { title: fr.academicSubtitle2, subtitle: fr.academicDesc2, image: "/images/global/banner1.jpg" },
-              { title: fr.academicSubtitle3, subtitle: fr.academicDesc3, image: "/images/global/cta-thumb.webp" },
-              { title: fr.academicSubtitle4, subtitle: fr.academicDesc4, image: "/images/global/about1.jpg" }
+              { title: fr.academicSubtitle1, subtitle: fr.academicDesc1, image: "/images/global/segment-early-childhood.jpg" },
+              { title: fr.academicSubtitle2, subtitle: fr.academicDesc2, image: "/images/global/segment-primary-school.jpg" },
+              { title: fr.academicSubtitle3, subtitle: fr.academicDesc3, image: "/images/global/segment-middle-school.jpg" },
+              { title: fr.academicSubtitle4, subtitle: fr.academicDesc4, image: "/images/global/segment-high-school.jpg" }
             ].map((program, idx) => (
               <div key={idx} className="group relative block rounded-3xl overflow-visible h-[360px] cursor-pointer">
                 <div className="absolute inset-0 rounded-3xl overflow-hidden border border-border/70 z-0">
