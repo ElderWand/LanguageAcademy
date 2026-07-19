@@ -95,24 +95,20 @@ export function Header() {
           <Link href="/" className="shrink-0 flex items-center">
             {/* Desktop Logo */}
             <Image 
-              src="/images/brand/next_point_academy_words.svg" 
+              src={scrolled ? "/images/brand/npa_logo_dark.svg" : "/images/brand/npa_logo_light.svg"} 
               alt="Next Point Academy" 
-              width={140} 
-              height={40} 
-              className={`hidden md:block h-9 w-auto transition-all duration-300 ${
-                scrolled ? "" : "brightness-0 invert"
-              }`}
+              width={180} 
+              height={74} 
+              className="hidden md:block h-9 w-auto transition-all duration-300"
               style={{ width: "auto" }}
             />
             {/* Mobile Logo */}
             <Image 
-              src="/images/brand/picto_next_point.svg" 
+              src="/images/brand/next_point_academy_favicon.png" 
               alt="Next Point Academy" 
               width={36} 
               height={36} 
-              className={`block md:hidden h-9 w-auto transition-all duration-300 ${
-                scrolled ? "" : "brightness-0 invert"
-              }`}
+              className="block md:hidden h-9 w-auto transition-all duration-300"
               style={{ width: "auto" }}
             />
           </Link>
@@ -283,7 +279,7 @@ export function Header() {
                       {t.langHubDesc}
                     </p>
                   </div>
-                  <button onClick={() => openTestModal()} className="mt-8 inline-flex items-center gap-2 text-xs font-bold text-brand-navy hover:text-[#0f1e43]/85 transition-colors cursor-pointer">
+                  <button onClick={() => openTestModal()} className="mt-8 inline-flex items-center gap-2 text-xs font-bold text-brand-navy hover:text-[#041780]/85 transition-colors cursor-pointer">
                     {t.evalLevel} &rarr;
                   </button>
                 </div>

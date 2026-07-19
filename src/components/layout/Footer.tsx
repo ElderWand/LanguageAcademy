@@ -21,11 +21,11 @@ export function Footer() {
           <div className="col-span-2 md:col-span-3 lg:col-span-2 space-y-6">
             <Link href="/" className="inline-block hover:opacity-90 transition-opacity">
               <Image 
-                src="/images/brand/next_point_academy.svg" 
+                src="/images/brand/npa_logo_light.svg" 
                 alt="Next Point Academy" 
-                width={360} 
-                height={130} 
-                className="w-[360px] h-auto brightness-0 invert"
+                width={220} 
+                height={90} 
+                className="w-[220px] h-auto"
                 style={{ height: "auto" }}
               />
             </Link>
