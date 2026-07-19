@@ -14,7 +14,10 @@ import {
   Award,
   Users,
   Briefcase,
-  Sparkles
+  Sparkles,
+  Phone,
+  Mail,
+  MapPin
 } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { useLevelTest } from "@/context/LevelTestContext";
@@ -83,11 +86,32 @@ export function Header() {
   };
 
   return (
-    <header className="fixed top-0 left-0 right-0 z-50 w-full px-4 sm:px-6 lg:px-8 pt-4 pointer-events-none">
-      <div className={`mx-auto flex h-16 max-w-[1280px] w-full items-center justify-between px-6 border rounded-full pointer-events-auto transition-all duration-300 ${
+    <header className="fixed top-0 left-0 right-0 z-50 w-full transition-all duration-300">
+      {/* Top Info Bar (Desktop only) */}
+      <div className={`hidden md:flex bg-brand-lime text-brand-navy text-[11px] font-bold items-center justify-between px-6 lg:px-12 transition-all duration-300 overflow-hidden ${
+        scrolled ? "h-0 opacity-0 border-none" : "h-9 border-b border-brand-lime-dark/15"
+      }`}>
+        <div className="flex items-center gap-6">
+          <div className="flex items-center gap-1.5">
+            <MapPin className="size-3.5 text-brand-navy/80 shrink-0" />
+            <span>Rue Ibnou Katir, Résidence Les Perles de Casablanca, Casablanca</span>
+          </div>
+          <div className="flex items-center gap-1.5">
+            <Mail className="size-3.5 text-brand-navy/80 shrink-0" />
+            <a href="mailto:contact@nextpoint.ma" className="hover:underline">contact@nextpoint.ma</a>
+          </div>
+        </div>
+        <div className="flex items-center gap-1.5">
+          <Phone className="size-3.5 text-brand-navy/80 shrink-0" />
+          <a href="tel:+212663068618" className="hover:underline">+212 6 63 06 86 18</a>
+        </div>
+      </div>
+
+      {/* Main Navbar */}
+      <div className={`w-full flex h-16 items-center justify-between px-6 lg:px-12 transition-all duration-300 border-b ${
         scrolled 
-          ? "bg-white/95 backdrop-blur-lg border-slate-200/50 shadow-sm text-brand-navy" 
-          : "bg-white/10 backdrop-blur-md border-white/10 shadow-xs text-white"
+          ? "bg-white/80 backdrop-blur-md border-slate-200/40 shadow-xs text-brand-navy" 
+          : "bg-transparent border-transparent text-white"
       }`}>
         
         {/* Left Side: Logo */}
@@ -263,7 +287,9 @@ export function Header() {
           aria-label={`${activeMenu} sub-navigation`}
           onMouseEnter={handleDropdownEnter}
           onMouseLeave={handleDropdownLeave}
-          className="absolute top-[4.75rem] left-1/2 -translate-x-1/2 w-full max-w-[1280px] bg-white border border-slate-200/50 rounded-3xl shadow-xl z-50 pointer-events-auto transition-all duration-300 animate-in fade-in slide-in-from-top-2 text-brand-navy"
+          className={`absolute left-1/2 -translate-x-1/2 w-full max-w-[1280px] bg-white border border-slate-200/50 rounded-3xl shadow-xl z-50 pointer-events-auto transition-all duration-300 animate-in fade-in slide-in-from-top-2 text-brand-navy ${
+            scrolled ? "top-[4.25rem]" : "top-[6.5rem]"
+          }`}
         >
           <div className="w-full px-10 py-8">
             
@@ -493,7 +519,9 @@ export function Header() {
       {/*                       MOBILE COLLAPSIBLE DRAWER                          */}
       {/* ========================================================================= */}
       {mobileOpen && (
-        <nav aria-label="Mobile Navigation" className="lg:hidden absolute top-[4.75rem] left-0 right-0 w-full bg-white border border-slate-200/50 rounded-3xl shadow-xl max-h-[calc(100vh-6rem)] overflow-y-auto z-40 pointer-events-auto animate-in fade-in slide-in-from-top-4 text-brand-navy">
+        <nav aria-label="Mobile Navigation" className={`lg:hidden absolute left-0 right-0 w-full bg-white border border-slate-200/50 rounded-b-3xl shadow-xl max-h-[calc(100vh-6rem)] overflow-y-auto z-40 pointer-events-auto animate-in fade-in slide-in-from-top-4 text-brand-navy ${
+          scrolled ? "top-[4rem]" : "top-[4rem] md:top-[6.25rem]"
+        }`}>
           <div className="p-6 space-y-6">
             
             {/* Language Switcher on mobile */}
